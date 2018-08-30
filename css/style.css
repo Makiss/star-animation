@@ -1,0 +1,113 @@
+/* --------------------------
+  Base
+--------------------------- */
+
+body {
+  background: #8069a1;
+  padding-top: 60px;
+}
+
+svg {
+	margin: auto;
+  display: block;
+}
+
+/* --------------------------
+  Keyframes
+--------------------------- */
+
+
+
+/* --------------------------
+  SVG Styles
+--------------------------- */
+
+svg * {
+	transform-origin: 50% 50%;
+	transform-box: fill-box;
+}
+
+.inner,
+.outer,
+.rounded-line {
+	animation-name: show;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+}
+
+.inner {
+	animation-delay: 0.1s;
+}
+
+.rounded-line {
+	animation-delay: 0.2s;
+}
+
+.star {
+	transform: scale(0);
+	animation-name: show, rotate;
+	animation-duration: 2s, 2s;
+	animation-delay: 1.2s, 2.2s;
+	animation-fill-mode: forwards;
+}
+
+.star circle {
+	animation-name: sparkle;
+	animation-duration: 2s;
+}
+
+.star circle:nth-of-type(1) {
+	animation-delay: 4.4s;
+}
+
+.star circle:nth-of-type(2) {
+	animation-delay: 4.6s;
+}
+
+.star circle:nth-of-type(3) {
+	animation-delay: 4.8s;
+}
+
+.star circle:nth-of-type(4) {
+	animation-delay: 5s;
+}
+
+.star circle:nth-of-type(5) {
+	animation-delay: 5.2s;
+}
+
+@keyframes show {
+	0% {
+		transform: scale(0);
+	}
+	20% {
+		transform: scale(1.1);
+	}
+	60% {
+		transform: scale(0.9);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+@keyframes rotate {
+	0% {
+		transform: rotate(0deg);
+	}
+	20% {
+		transform: rotate(375deg);
+	}
+	60% {
+		transform: rotate(355deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes sparkle {
+	50% {
+		transform: scale(2);
+	}
+}
